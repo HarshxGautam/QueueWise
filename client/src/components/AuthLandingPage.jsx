@@ -19,9 +19,7 @@ import {
   Moon,
   Monitor
 } from 'lucide-react';
-
-const HOST = typeof window !== "undefined" ? window.location.hostname : "localhost";
-const API_BASE = `http://${HOST}:5000/api`;
+import { API_BASE } from '../config/api';
 
 const CAMPUS_SERVICES_PREVIEW = [
   { name: "Placement Cell", icon: Briefcase, wait: "12m", prefix: "P" },

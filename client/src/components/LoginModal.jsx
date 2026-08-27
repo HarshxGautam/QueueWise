@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Lock, User, Eye, EyeOff, X, ShieldCheck, Crown, Users, GraduationCap } from 'lucide-react';
-
-const HOST = typeof window !== "undefined" ? window.location.hostname : "localhost";
-const API_BASE = `http://${HOST}:5000/api`;
+import { API_BASE } from '../config/api';
 
 export default function LoginModal({ isOpen, onClose, onLoginSuccess }) {
   const [activeTab, setActiveTab] = useState('student'); // 'student' | 'staff' | 'admin'

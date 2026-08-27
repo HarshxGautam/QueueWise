@@ -11,9 +11,7 @@ import LoginModal from "./components/LoginModal";
 import AnalyticsDashboard from "./components/AnalyticsDashboard";
 import AuthLandingPage from "./components/AuthLandingPage";
 import { playChimeSound, sendSystemNotification, triggerHapticVibration, requestNotificationPermission } from "./utils/notifications";
-
-const HOST = typeof window !== "undefined" ? window.location.hostname : "localhost";
-const API_BASE = `http://${HOST}:5000/api`;
+import { API_BASE, SOCKET_URL } from "./config/api";
 
 export default function App() {
   const [currentView, setCurrentView] = useState("kiosk");
@@ -165,7 +163,7 @@ export default function App() {
   useEffect(() => {
     fetchAllData();
 
-    const socket = io(`http://${HOST}:5000`);
+    const socket = io(SOCKET_URL);
     
     socket.on('connect', () => {
       setServerStatus(true);
