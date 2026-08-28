@@ -525,8 +525,12 @@ export default function App() {
       />
 
       {/* Footer */}
-      <footer className="py-6 border-t border-white/5 text-center text-xs text-slate-500">
-        <p>© 2026 QueueWise AI • Smart Enterprise Virtual Queue & Wait-Time Engine</p>
+      <footer className="py-6 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500 dark:text-slate-400">
+        <p className="flex items-center justify-center gap-1.5 flex-wrap">
+          <span>© 2026 QueueWise</span>
+          <span>•</span>
+          <span>Designed & Built with ❤️ by <a href="https://github.com/HarshxGautam" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline">Harsh Gautam</a></span>
+        </p>
       </footer>
 
     </div>
